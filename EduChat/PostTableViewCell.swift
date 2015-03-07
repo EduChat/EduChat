@@ -10,9 +10,10 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var timestampLabel: UILabel!
-    @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var contentBox: UITextView!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var timestampLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -45,13 +45,7 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
                     }else{
                         println("Login failed")
                     }
-                    
-                    
                 }
-                
-                
-                
-                
             }))
             
             loginAlert.addAction(UIAlertAction(title: "Sign Up", style: UIAlertActionStyle.Default, handler: {
@@ -100,13 +94,15 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
                 if let objects = objects as? [PFObject] {
                     for object in objects {
                         self.discussionData.addObject(object)
+                        println(self.discussionData)
                     }
                     
-                    //Reverse data so most reccent is first
+//                  Reverse data so most reccent is first
                     let rArray : NSArray = self.discussionData.reverseObjectEnumerator().allObjects
-                    self.discussionData = rArray as NSMutableArray
+                    self.discussionData = NSMutableArray(array: rArray)
                     
-                    self.discussionTableView.reloadData()
+                    
+                  self.discussionTableView.reloadData()
                     println(self.discussionData)
                 }
             } else {
