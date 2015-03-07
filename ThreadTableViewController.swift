@@ -24,6 +24,10 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate {
         var message : PFObject = PFObject(className: "Messages")
         message["content"] = messageBox.text
         message.saveInBackground()
+        self.view.center = originalCenter
+        messageBox.resignFirstResponder()
+        messageBox.text = ""
+        
     }
     
     override func viewDidLoad() {
@@ -48,6 +52,9 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate {
 //        CGFloat height = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].height;
         self.view.center = CGPointMake(self.originalCenter.x, self.originalCenter.y-216)
         println("HEY")
+    }
+    func textViewDidEndEditing(textView: UITextView) {
+        self.view.center = originalCenter
     }
     
 }
