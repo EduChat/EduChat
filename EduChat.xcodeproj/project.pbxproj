@@ -13,6 +13,22 @@
 		2E8FDCBD1AAB489500AA6219 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FDCBC1AAB489500AA6219 /* Images.xcassets */; };
 		2E8FDCC01AAB489500AA6219 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FDCBE1AAB489500AA6219 /* LaunchScreen.xib */; };
 		2E8FDCCC1AAB489500AA6219 /* EduChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FDCCB1AAB489500AA6219 /* EduChatTests.swift */; };
+		2E8FDCE81AAB492900AA6219 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCD81AAB492900AA6219 /* libsqlite3.dylib */; };
+		2E8FDCE91AAB492900AA6219 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCD91AAB492900AA6219 /* libz.dylib */; };
+		2E8FDCEA1AAB492900AA6219 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCDA1AAB492900AA6219 /* Bolts.framework */; };
+		2E8FDCEB1AAB492900AA6219 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCDB1AAB492900AA6219 /* Parse.framework */; };
+		2E8FDCEC1AAB492900AA6219 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCDC1AAB492900AA6219 /* ParseCrashReporting.framework */; };
+		2E8FDCED1AAB492900AA6219 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCDD1AAB492900AA6219 /* ParseFacebookUtils.framework */; };
+		2E8FDCEE1AAB492900AA6219 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCDE1AAB492900AA6219 /* ParseUI.framework */; };
+		2E8FDCEF1AAB492900AA6219 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCDF1AAB492900AA6219 /* SystemConfiguration.framework */; };
+		2E8FDCF01AAB492900AA6219 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE01AAB492900AA6219 /* StoreKit.framework */; };
+		2E8FDCF11AAB492900AA6219 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE11AAB492900AA6219 /* Security.framework */; };
+		2E8FDCF21AAB492900AA6219 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE21AAB492900AA6219 /* QuartzCore.framework */; };
+		2E8FDCF31AAB492900AA6219 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE31AAB492900AA6219 /* MobileCoreServices.framework */; };
+		2E8FDCF41AAB492900AA6219 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE41AAB492900AA6219 /* CoreLocation.framework */; };
+		2E8FDCF51AAB492900AA6219 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE51AAB492900AA6219 /* CoreGraphics.framework */; };
+		2E8FDCF61AAB492900AA6219 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE61AAB492900AA6219 /* CFNetwork.framework */; };
+		2E8FDCF71AAB492900AA6219 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE71AAB492900AA6219 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +52,23 @@
 		2E8FDCC51AAB489500AA6219 /* EduChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EduChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8FDCCA1AAB489500AA6219 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8FDCCB1AAB489500AA6219 /* EduChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EduChatTests.swift; sourceTree = "<group>"; };
+		2E8FDCD51AAB48FE00AA6219 /* EduChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EduChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		2E8FDCD81AAB492900AA6219 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.dylib; sourceTree = "<group>"; };
+		2E8FDCD91AAB492900AA6219 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libz.dylib; sourceTree = "<group>"; };
+		2E8FDCDA1AAB492900AA6219 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		2E8FDCDB1AAB492900AA6219 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		2E8FDCDC1AAB492900AA6219 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		2E8FDCDD1AAB492900AA6219 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		2E8FDCDE1AAB492900AA6219 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		2E8FDCDF1AAB492900AA6219 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SystemConfiguration.framework; sourceTree = "<group>"; };
+		2E8FDCE01AAB492900AA6219 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StoreKit.framework; sourceTree = "<group>"; };
+		2E8FDCE11AAB492900AA6219 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Security.framework; sourceTree = "<group>"; };
+		2E8FDCE21AAB492900AA6219 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QuartzCore.framework; sourceTree = "<group>"; };
+		2E8FDCE31AAB492900AA6219 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileCoreServices.framework; sourceTree = "<group>"; };
+		2E8FDCE41AAB492900AA6219 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreLocation.framework; sourceTree = "<group>"; };
+		2E8FDCE51AAB492900AA6219 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreGraphics.framework; sourceTree = "<group>"; };
+		2E8FDCE61AAB492900AA6219 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CFNetwork.framework; sourceTree = "<group>"; };
+		2E8FDCE71AAB492900AA6219 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +76,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8FDCF01AAB492900AA6219 /* StoreKit.framework in Frameworks */,
+				2E8FDCEA1AAB492900AA6219 /* Bolts.framework in Frameworks */,
+				2E8FDCF41AAB492900AA6219 /* CoreLocation.framework in Frameworks */,
+				2E8FDCEC1AAB492900AA6219 /* ParseCrashReporting.framework in Frameworks */,
+				2E8FDCF21AAB492900AA6219 /* QuartzCore.framework in Frameworks */,
+				2E8FDCEE1AAB492900AA6219 /* ParseUI.framework in Frameworks */,
+				2E8FDCED1AAB492900AA6219 /* ParseFacebookUtils.framework in Frameworks */,
+				2E8FDCE81AAB492900AA6219 /* libsqlite3.dylib in Frameworks */,
+				2E8FDCF11AAB492900AA6219 /* Security.framework in Frameworks */,
+				2E8FDCF61AAB492900AA6219 /* CFNetwork.framework in Frameworks */,
+				2E8FDCEB1AAB492900AA6219 /* Parse.framework in Frameworks */,
+				2E8FDCF71AAB492900AA6219 /* AudioToolbox.framework in Frameworks */,
+				2E8FDCF51AAB492900AA6219 /* CoreGraphics.framework in Frameworks */,
+				2E8FDCF31AAB492900AA6219 /* MobileCoreServices.framework in Frameworks */,
+				2E8FDCEF1AAB492900AA6219 /* SystemConfiguration.framework in Frameworks */,
+				2E8FDCE91AAB492900AA6219 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +108,7 @@
 		2E8FDCA71AAB489500AA6219 = {
 			isa = PBXGroup;
 			children = (
+				2E8FDCD51AAB48FE00AA6219 /* EduChat-Bridging-Header.h */,
 				2E8FDCB21AAB489500AA6219 /* EduChat */,
 				2E8FDCC81AAB489500AA6219 /* EduChatTests */,
 				2E8FDCB11AAB489500AA6219 /* Products */,
@@ -77,6 +127,22 @@
 		2E8FDCB21AAB489500AA6219 /* EduChat */ = {
 			isa = PBXGroup;
 			children = (
+				2E8FDCD81AAB492900AA6219 /* libsqlite3.dylib */,
+				2E8FDCD91AAB492900AA6219 /* libz.dylib */,
+				2E8FDCDA1AAB492900AA6219 /* Bolts.framework */,
+				2E8FDCDB1AAB492900AA6219 /* Parse.framework */,
+				2E8FDCDC1AAB492900AA6219 /* ParseCrashReporting.framework */,
+				2E8FDCDD1AAB492900AA6219 /* ParseFacebookUtils.framework */,
+				2E8FDCDE1AAB492900AA6219 /* ParseUI.framework */,
+				2E8FDCDF1AAB492900AA6219 /* SystemConfiguration.framework */,
+				2E8FDCE01AAB492900AA6219 /* StoreKit.framework */,
+				2E8FDCE11AAB492900AA6219 /* Security.framework */,
+				2E8FDCE21AAB492900AA6219 /* QuartzCore.framework */,
+				2E8FDCE31AAB492900AA6219 /* MobileCoreServices.framework */,
+				2E8FDCE41AAB492900AA6219 /* CoreLocation.framework */,
+				2E8FDCE51AAB492900AA6219 /* CoreGraphics.framework */,
+				2E8FDCE61AAB492900AA6219 /* CFNetwork.framework */,
+				2E8FDCE71AAB492900AA6219 /* AudioToolbox.framework */,
 				2E8FDCB51AAB489500AA6219 /* AppDelegate.swift */,
 				2E8FDCB71AAB489500AA6219 /* ViewController.swift */,
 				2E8FDCB91AAB489500AA6219 /* Main.storyboard */,
@@ -336,9 +402,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EduChat",
+				);
 				INFOPLIST_FILE = EduChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EduChat",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EduChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +423,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EduChat",
+				);
 				INFOPLIST_FILE = EduChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EduChat",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EduChat-Bridging-Header.h";
 			};
 			name = Release;
 		};
