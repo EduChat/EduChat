@@ -129,22 +129,7 @@
 		2E8FDCB21AAB489500AA6219 /* EduChat */ = {
 			isa = PBXGroup;
 			children = (
-				2E8FDCD81AAB492900AA6219 /* libsqlite3.dylib */,
-				2E8FDCD91AAB492900AA6219 /* libz.dylib */,
-				2E8FDCDA1AAB492900AA6219 /* Bolts.framework */,
-				2E8FDCDB1AAB492900AA6219 /* Parse.framework */,
-				2E8FDCDC1AAB492900AA6219 /* ParseCrashReporting.framework */,
-				2E8FDCDD1AAB492900AA6219 /* ParseFacebookUtils.framework */,
-				2E8FDCDE1AAB492900AA6219 /* ParseUI.framework */,
-				2E8FDCDF1AAB492900AA6219 /* SystemConfiguration.framework */,
-				2E8FDCE01AAB492900AA6219 /* StoreKit.framework */,
-				2E8FDCE11AAB492900AA6219 /* Security.framework */,
-				2E8FDCE21AAB492900AA6219 /* QuartzCore.framework */,
-				2E8FDCE31AAB492900AA6219 /* MobileCoreServices.framework */,
-				2E8FDCE41AAB492900AA6219 /* CoreLocation.framework */,
-				2E8FDCE51AAB492900AA6219 /* CoreGraphics.framework */,
-				2E8FDCE61AAB492900AA6219 /* CFNetwork.framework */,
-				2E8FDCE71AAB492900AA6219 /* AudioToolbox.framework */,
+				2E8FDCFA1AAB4E8700AA6219 /* Frameworks */,
 				2E8FDCB51AAB489500AA6219 /* AppDelegate.swift */,
 				2E8FDCB71AAB489500AA6219 /* ViewController.swift */,
 				2E8FDCB91AAB489500AA6219 /* Main.storyboard */,
@@ -179,6 +164,29 @@
 				2E8FDCCA1AAB489500AA6219 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E8FDCFA1AAB4E8700AA6219 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FDCD81AAB492900AA6219 /* libsqlite3.dylib */,
+				2E8FDCD91AAB492900AA6219 /* libz.dylib */,
+				2E8FDCDA1AAB492900AA6219 /* Bolts.framework */,
+				2E8FDCDB1AAB492900AA6219 /* Parse.framework */,
+				2E8FDCDC1AAB492900AA6219 /* ParseCrashReporting.framework */,
+				2E8FDCDD1AAB492900AA6219 /* ParseFacebookUtils.framework */,
+				2E8FDCDE1AAB492900AA6219 /* ParseUI.framework */,
+				2E8FDCDF1AAB492900AA6219 /* SystemConfiguration.framework */,
+				2E8FDCE01AAB492900AA6219 /* StoreKit.framework */,
+				2E8FDCE11AAB492900AA6219 /* Security.framework */,
+				2E8FDCE21AAB492900AA6219 /* QuartzCore.framework */,
+				2E8FDCE31AAB492900AA6219 /* MobileCoreServices.framework */,
+				2E8FDCE41AAB492900AA6219 /* CoreLocation.framework */,
+				2E8FDCE51AAB492900AA6219 /* CoreGraphics.framework */,
+				2E8FDCE61AAB492900AA6219 /* CFNetwork.framework */,
+				2E8FDCE71AAB492900AA6219 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +504,7 @@
 				2E8FDCD11AAB489500AA6219 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E8FDCD21AAB489500AA6219 /* Build configuration list for PBXNativeTarget "EduChatTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +513,7 @@
 				2E8FDCD41AAB489500AA6219 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

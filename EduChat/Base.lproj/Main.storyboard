@@ -7,19 +7,20 @@
         <!--Class Chat-->
         <scene sceneID="qbb-cZ-1G6">
             <objects>
-                <viewController id="c4N-hJ-eRP" sceneMemberID="viewController">
+                <viewController id="c4N-hJ-eRP" customClass="ViewController" customModule="EduChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eRV-MK-vaE"/>
                         <viewControllerLayoutGuide type="bottom" id="RWl-sa-Euq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hdK-EB-16N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="EVv-HQ-1l2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="123" width="400" height="677"/>
+                                    <rect key="frame" x="0.0" y="64" width="400" height="595"/>
                                 </variation>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggU-W7-6fs">
@@ -31,35 +32,49 @@
                                     <rect key="frame" x="184" y="38" width="32" height="30"/>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEe-3H-qMu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1U-JW-R8z">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.14996556636394581" green="0.27639385984170395" blue="0.54243607954545459" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Button">
+                                <color key="backgroundColor" red="0.1499655664" green="0.27639385979999997" blue="0.54243607949999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Post">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="61"/>
+                                    <rect key="frame" x="0.0" y="659" width="400" height="38"/>
                                 </variation>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xj4-Uz-YBN">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.8308278093" green="0.8308278093" blue="0.8308278093" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="696" width="400" height="104"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="EVv-HQ-1l2"/>
                                 <exclude reference="ggU-W7-6fs"/>
-                                <exclude reference="LEe-3H-qMu"/>
+                                <exclude reference="e1U-JW-R8z"/>
+                                <exclude reference="xj4-Uz-YBN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="EVv-HQ-1l2"/>
                                 <include reference="ggU-W7-6fs"/>
-                                <include reference="LEe-3H-qMu"/>
+                                <include reference="e1U-JW-R8z"/>
+                                <include reference="xj4-Uz-YBN"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Class Chat" id="pFb-Bd-eBR"/>
+                    <connections>
+                        <outlet property="messageBox" destination="xj4-Uz-YBN" id="6Vj-HR-Sv0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="463-Kl-Fy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
