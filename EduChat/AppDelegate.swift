@@ -18,8 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.enableLocalDatastore()
         Parse.setApplicationId("degR9ZQdKDYeuvJChpul5tD1RakAGDMQsxAoMlk9", clientKey: "OicSInqKvj9Cr7fX1EVQOdyyOCRH68xjL72jaHjo")
-        
-        
+        var testObject : PFObject = PFObject(className: "TestObject")
+        testObject["foo"] = "bar"
+        testObject.saveInBackground()
+//        PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+//        testObject[@"foo"] = @"bar";
+//        [testObject saveInBackground];
         
         return true
     }

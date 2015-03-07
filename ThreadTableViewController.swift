@@ -8,16 +8,16 @@
 
 import UIKit
 
-class ThreadTableViewController: UIViewController, UITextViewDelegate {
+class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource {
     
     
     @IBOutlet weak var messageBox: UITextView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var discussionTableView: UITableView!
     var originalCenter = CGPoint()
-    
+    var discussionData : NSMutableArray = NSMutableArray()
     
     override func viewDidAppear(animated: Bool) {
-        
+        self.fetchMessages()
         if PFUser.currentUser() == nil {
             var loginAlert:UIAlertController = UIAlertController(title: "Sign Up / Login", message: "Please sign up or login", preferredStyle: UIAlertControllerStyle.Alert)
             
@@ -83,9 +83,42 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate {
             self.presentViewController(loginAlert, animated: true, completion: nil)
         }
     }
-
+    
+    func fetchMessages() {
+        println("hey")
+        discussionData.removeAllObjects()
+        
+        var getDiscussionData : PFQuery = PFQuery(className: "Messages")
+        
+        getDiscussionData.findObjectsInBackgroundWithBlock{
+            (objects:[AnyObject]!, error:NSError!)->Void in
+            
+            if error == nil {
+                // The find succeeded.
+                println("Successfully retrieved \(objects.count) scores.")
+                // Do something with the found objects
+                if let objects = objects as? [PFObject] {
+                    for object in objects {
+                        self.discussionData.addObject(object)
+                    }
+                    
+                    //Reverse data so most reccent is first
+                    let rArray : NSArray = self.discussionData.reverseObjectEnumerator().allObjects
+                    self.discussionData = rArray as NSMutableArray
+                    
+                    self.discussionTableView.reloadData()
+                    println(self.discussionData)
+                }
+            } else {
+                // Log details of the failure
+                println("Error: \(error) \(error.userInfo!)")
+            }
+        }
+    }
+    
     @IBAction func post(sender: UIButton) {
         var message : PFObject = PFObject(className: "Messages")
+        
         message["content"] = messageBox.text
         message.saveInBackground()
         //save textfield value
@@ -101,7 +134,7 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         originalCenter = self.view.center
-        self.tableView.tableFooterView = UIView(frame: CGRectZero)
+        self.discussionTableView.tableFooterView = UIView(frame: CGRectZero)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -119,10 +152,30 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate {
         //        let keyHeight : CGFloat =
         //        CGFloat height = [[notification.userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].height;
         self.view.center = CGPointMake(self.originalCenter.x, self.originalCenter.y-216)
-        println("HEY")
     }
     func textViewDidEndEditing(textView: UITextView) {
         self.view.center = originalCenter
     }
     
+    //Tablview Datasource Methods
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell : PostTableViewCell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as PostTableViewCell
+        
+        //Configure the cell
+        
+        let post:PFObject = self.discussionData.objectAtIndex(indexPath.row) as PFObject
+        
+        cell.contentBox.text = post["content"] as String
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.discussionData.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
 }
