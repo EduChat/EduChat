@@ -54,11 +54,11 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
                 let usernameTextfield:UITextField = textFields.objectAtIndex(0) as UITextField
                 let passwordTextfield:UITextField = textFields.objectAtIndex(1) as UITextField
                 
-                var sweeter:PFUser = PFUser()
-                sweeter.username = usernameTextfield.text
-                sweeter.password = passwordTextfield.text
+                var message:PFUser = PFUser()
+                message.username = usernameTextfield.text
+                message.password = passwordTextfield.text
                 
-                sweeter.signUpInBackgroundWithBlock{
+                message.signUpInBackgroundWithBlock{
                     (success:Bool!, error:NSError!)->Void in
                     if error == nil{
                         println("Sign Up successfull")
@@ -112,10 +112,12 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
         }
     }
     
+  
     @IBAction func post(sender: UIButton) {
         var message : PFObject = PFObject(className: "Messages")
         
         message["content"] = messageBox.text
+        message["user"] = PFUser.currentUser()
         message.saveInBackground()
         //save textfield value
         self.view.center = originalCenter
