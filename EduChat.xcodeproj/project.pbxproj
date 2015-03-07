@@ -29,6 +29,7 @@
 		2E8FDCF51AAB492900AA6219 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE51AAB492900AA6219 /* CoreGraphics.framework */; };
 		2E8FDCF61AAB492900AA6219 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE61AAB492900AA6219 /* CFNetwork.framework */; };
 		2E8FDCF71AAB492900AA6219 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8FDCE71AAB492900AA6219 /* AudioToolbox.framework */; };
+		2E8FDCF91AAB4E3B00AA6219 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FDCF81AAB4E3B00AA6219 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		2E8FDCE51AAB492900AA6219 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreGraphics.framework; sourceTree = "<group>"; };
 		2E8FDCE61AAB492900AA6219 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CFNetwork.framework; sourceTree = "<group>"; };
 		2E8FDCE71AAB492900AA6219 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioToolbox.framework; sourceTree = "<group>"; };
+		2E8FDCF81AAB4E3B00AA6219 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				2E8FDCB51AAB489500AA6219 /* AppDelegate.swift */,
 				2E8FDCB71AAB489500AA6219 /* ViewController.swift */,
 				2E8FDCB91AAB489500AA6219 /* Main.storyboard */,
+				2E8FDCF81AAB4E3B00AA6219 /* .gitignore */,
 				2E8FDCBC1AAB489500AA6219 /* Images.xcassets */,
 				2E8FDCBE1AAB489500AA6219 /* LaunchScreen.xib */,
 				2E8FDCB31AAB489500AA6219 /* Supporting Files */,
@@ -258,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E8FDCF91AAB4E3B00AA6219 /* .gitignore in Resources */,
 				2E8FDCBB1AAB489500AA6219 /* Main.storyboard in Resources */,
 				2E8FDCC01AAB489500AA6219 /* LaunchScreen.xib in Resources */,
 				2E8FDCBD1AAB489500AA6219 /* Images.xcassets in Resources */,
