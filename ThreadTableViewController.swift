@@ -102,7 +102,7 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
                     self.discussionData = NSMutableArray(array: rArray)
                     
                     
-                    self.discussionTableView.reloadData()
+                  self.discussionTableView.reloadData()
                     println(self.discussionData)
                 }
             } else {
@@ -112,9 +112,6 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
         }
     }
     
-    @IBAction func Refresh(sender: AnyObject) {
-        self.fetchMessages()
-    }
   
     @IBAction func post(sender: UIButton) {
         var message : PFObject = PFObject(className: "Messages")
@@ -168,8 +165,6 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
         let post:PFObject = self.discussionData.objectAtIndex(indexPath.row) as PFObject
         
         cell.contentBox.text = post["content"] as String
-        cell.authorLabel.text = post["user"]["username"] as? String
-        cell.timestampLabel.text = post["createdAt"] as String
         
         return cell
     }
