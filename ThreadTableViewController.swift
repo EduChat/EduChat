@@ -43,7 +43,8 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
                     if user != nil{
                         println("Login successfull")
                     }else{
-                        println("Login failed")
+                        loginAlert.message = "Username/Password combination incorrect"
+                        self.presentViewController(loginAlert, animated: true, completion: nil)
                     }
                 }
             }))
@@ -78,6 +79,10 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
         }
     }
     
+    @IBAction func Refresh(sender: AnyObject) {
+        self.fetchMessages()
+    }
+    
     func fetchMessages() {
         println("hey")
         discussionData.removeAllObjects()
@@ -97,13 +102,10 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
                         println(self.discussionData)
                     }
                     
-//                  Reverse data so most reccent is first
-                    let rArray : NSArray = self.discussionData.reverseObjectEnumerator().allObjects
-                    self.discussionData = NSMutableArray(array: rArray)
                     
-                    
-                  self.discussionTableView.reloadData()
-                    println(self.discussionData)
+                    self.discussionTableView.reloadData()
+                    let ipath : NSIndexPath = NSIndexPath(forRow: self.discussionData.count-1, inSection: 0)
+                    self.discussionTableView.scrollToRowAtIndexPath(ipath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
                 }
             } else {
                 // Log details of the failure
@@ -112,7 +114,7 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
         }
     }
     
-  
+    
     @IBAction func post(sender: UIButton) {
         var message : PFObject = PFObject(className: "Messages")
         
@@ -126,13 +128,15 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
         //close keyboard
         messageBox.text = ""
         //reset textfield
-        
+        self.fetchMessages()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         originalCenter = self.view.center
         self.discussionTableView.tableFooterView = UIView(frame: CGRectZero)
+        let refreshTimer:NSTimer = NSTimer(timeInterval: 10, target: self, selector: Selector("fetchMessages"), userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(refreshTimer, forMode: NSDefaultRunLoopMode)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -164,7 +168,35 @@ class ThreadTableViewController: UIViewController, UITextViewDelegate, UITableVi
         
         let post:PFObject = self.discussionData.objectAtIndex(indexPath.row) as PFObject
         
+        cell.contentBox.alpha = 0
+        cell.timestampLabel.alpha = 0
+        cell.authorLabel.alpha = 0
+        
         cell.contentBox.text = post["content"] as String
+        
+        
+        var dataFormatter:NSDateFormatter = NSDateFormatter()
+        dataFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        cell.timestampLabel.text = dataFormatter.stringFromDate(post.createdAt)
+        
+        var findAuthor:PFQuery = PFUser.query()
+        //        findSweeter.whereKey("objectId", equalTo: sweet.objectForKey("sweeter").objectId)
+        findAuthor.whereKey("objectId", equalTo: post.objectForKey("user").objectId)
+        
+        findAuthor.findObjectsInBackgroundWithBlock{
+            (objects:[AnyObject]!, error:NSError!)->Void in
+            if error == nil{
+                let user:PFUser = (objects as NSArray).lastObject as PFUser
+                cell.authorLabel.text = user.username
+                
+                UIView.animateWithDuration(0.5, animations: {
+                    cell.contentBox.alpha = 1
+                    cell.timestampLabel.alpha = 1
+                    cell.authorLabel.alpha = 1
+                })
+            }
+        }
+        
         
         return cell
     }
